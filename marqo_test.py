@@ -1,6 +1,6 @@
-import marqo_test
+import marqo
 
-mq = marqo_test.Client(url='http://localhost:8882')
+mq = marqo.Client(url='http://localhost:8882')
 
 mq.create_index("my-first-index")
 
@@ -21,3 +21,7 @@ mq.index("my-first-index").add_documents([
 results = mq.index("my-first-index").search(
     q="What is the best outfit to wear on the moon?"
 )
+
+# let's print out the results:
+import pprint
+pprint.pprint(results)

@@ -12,7 +12,7 @@ mq = Client("http://localhost:8882")
 # Tell Marqo to create the multilingual index
 mq.create_index(index_name='my-multilingual-index', model='stsb-xlm-r-multilingual')
 
-
+# Indexing
 mq.index(index_name="my-multilingual-index").add_documents(
     device="cuda", auto_refresh=False,
     documents=[{

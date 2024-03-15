@@ -8,7 +8,7 @@ mq = marqo.Client(url='http://localhost:8882')
 # Tell Marqo to create the multilingual index
 mq.create_index("my-first-index")
 
-# Indexing 
+# Indexing
 mq.index("my-first-index").add_documents([
     {
         "Title": "The Travels of Marco Polo",
